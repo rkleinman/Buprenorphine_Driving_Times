@@ -101,10 +101,10 @@ for row2 in OTP_file:
 
 
 
-upper_bound = len(addresses)
+upper_bound = 500
 #print(len(addresses))
 lower_bound = 0
-addresses = addresses[lower_bound:upper_bound]
+#addresses = addresses[lower_bound:upper_bound]
 
 def f(x):
 
@@ -235,7 +235,7 @@ if __name__ == '__main__':
     #print(len(addresses))
     #Time is in minutes
     #Distance is in miles
-    for i in range(0,upper_bound-lower_bound):
+    for i in range(0,len(addresses)):
         b = [addresses[i].tract, addresses[i].county,addresses[i].state, math.degrees(addresses[i].latitude),math.degrees(addresses[i].longitude),addresses[i].population,
             math.degrees(addresses[i].otp_latitude), math.degrees(addresses[i].otp_longitude),
             addresses[i].otp_address_name,
